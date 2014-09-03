@@ -53,7 +53,7 @@ module NameEntity
     end
 
     def journal_line_entry_tax
-      if tax_code_ref
+      if !tax_code_ref
         # tax_applicable_on must be set
         errors.add(:tax_applicable_on, "TaxApplicableOn must be set when TaxCodeRef is set") if tax_applicable_on.nil?
         errors.add(:tax_amount, "TaxAmount must be set when TaxCodeRef is set") if tax_amount.nil?
