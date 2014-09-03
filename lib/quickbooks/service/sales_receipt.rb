@@ -1,6 +1,9 @@
 module Quickbooks
   module Service
     class SalesReceipt < BaseService
+      def delete(entry, options = {})
+        delete_by_query_string(entry)
+      end
 
       private
 
