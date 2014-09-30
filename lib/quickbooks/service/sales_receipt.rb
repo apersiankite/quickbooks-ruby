@@ -5,7 +5,7 @@ module Quickbooks
       def delete(entry)
         delete_by_query_string(entry)
       end
-      
+
       private
 
       def model

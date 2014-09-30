@@ -8,9 +8,11 @@ module Quickbooks
       xml_accessor :account_ref, :from => 'AccountRef', :as => BaseReference
       xml_accessor :class_ref, :from => 'ClassRef', :as => BaseReference
       xml_accessor :department_ref, :from => 'DepartmentRef', :as => BaseReference
-
+def journal_line_entry_tax
+          true
+        end
       xml_accessor :tax_code_ref, :from => 'TaxCodeRef', :as => BaseReference
-      xml_accessor :tax_applicable_on, :from => 'TaxApplicableOn'
+      xml_accessor :tax_applicable, :from => 'TaxApplicableOn'
       xml_accessor :tax_amount, :from => 'TaxAmount', :as => BigDecimal, :to_xml => to_xml_big_decimal
 
       xml_accessor :billable_status, :from => 'BillableStatus'
